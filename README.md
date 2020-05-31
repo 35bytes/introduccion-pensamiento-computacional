@@ -23,7 +23,7 @@
 - [Programas numéricos](#Programas-numéricos)
   - [Representación de flotantes](#Representación-de-flotantes)
   - [Enumeración exhaustiva](#Enumeración-exhaustiva)
-  
+  - [Aproximación de soluciones](#Aproximación-de-soluciones)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -126,7 +126,7 @@ Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son ma
 
 Un **algoritmo** es una _lista finita de instrucciones_ que describen un cómputo, que cuando se ejecuta con ciertas entradas _(inputs)_ ejecuta pasos intermedios para llegar a un resultado _(output)_. Los algoritmos se conocen desde los antiguos griegos, y fue la evolución de estos que nos dieron los primeros **lenguajes de programación.**
 
-**Ada Lovelace** se dio cuenta que con las bases teóricas del _motor analítico_ podía calcular una serie de los _números_ de Bernoulli_, y así creo el primer programa de computación.
+**Ada Lovelace** se dio cuenta que con las bases teóricas del _motor analítico_ podía calcular una serie de los _números de Bernoulli_, y así creo el primer programa de computación.
 
 <br>
 <div align="center"> 
@@ -774,3 +774,28 @@ if respuesta**2 == objetivo:
 else:
     print(f'{objetivo} no tinene una raiz cuadrada exacta')
 ```
+
+## Aproximación de soluciones
+
+Es similar a la enumarción exhaustiva, pero no necesita una respuesta exacta, por lo tanto podemos aproximar soluciones con un margen de error que llamaremos **epsilon**.
+
+Como siempre en programación debemos hacer un _trade-off_, no podemos ser precisos y rápidos a la ves, por lo tanto cuando nuestro **epsilon** es muy pequeño esto significa que debemos realizar **mas iteraciones** para llegar a la aproximación, lo cual significa sacrificar tiempo. Y por otro lado si queremos que nuestro **tiempo de ejecución** sea lo **mas corto posible** debemos sacrificar la **precisión** aumentando el valor de **epsilon**.
+
+```py
+objetivo = int(input('Escoge un numero: '))
+
+epsilon = 0.01      # Definimos un margen de error.
+paso = epsilon**2   # Los pasos para buscar la raiz sera igual a epsilon^2
+respuesta = 0       # Inicializamos una respuesta 0
+
+
+while abs(respuesta**2 - objetivo) >= epsilon and respuesta <= objetivo:
+    respuesta += paso
+
+if abs(respuesta**2 - objetivo) >= epsilon:
+    print(f'No se encontró la raiz cuadrada de {objetivo}')
+else:
+    print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+```
+
+Puedes intentar ir moviendo la magnitud de epsilon para obtener una mejor precisión o mejorar el tiempo de ejecución.
