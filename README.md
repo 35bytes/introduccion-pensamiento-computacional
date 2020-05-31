@@ -15,6 +15,8 @@
   - [Elementos básicos de Python](#Elementos-básicos-de-Python)
   - [Objetos, expresiones y tipos numéricos](#Objetos,-expresiones-y-tipos-numéricos)
   - [Asignación de variables](#Asignación-de-variables)
+  - [Cadenas](#Cadenas)
+  - [Entradas](#Entradas)
   
 
 # Introducción al pensamiento computacional
@@ -333,3 +335,101 @@ Los lenguajes tienen algo llamado **palabras reservadas**, estas son objetos den
   <img src="readme_img/reserved-words-python.png" width="500">
 </div>
 <br>
+
+## Cadenas
+
+Las **cadenas** son secuencias de caracteres.
+
+```py
+'123'         #Esta es una cadena
+```
+
+Los _operadores_ que utilizamos tienen otros significados. Cuando utilizamos el operador **multiplicar (*)** lo que haremos es multiplicar la cadena por el numero de veces que deseamos, y con el operador **suma (+)** concatenaremos varias cadenas, sin embargo _Python_ nos permite concatenar de una forma mas legible.
+
+```py
+'123' * 3               # Con el operador *
+'123123123'             # Obtenemos este resultado.
+
+'123' + '456'           # Y el operador +
+'123456'                # Concatenara las cadenas.
+
+('Hip ' * 3) + 'hurra'  # Tambien podemos combinar operadores
+'Hip Hip Hip hurra'
+
+f'{"Hip " * 3}hurra'    # En Python podemos usar la expresion f para concatenar
+'Hip Hip Hip hurra'
+```
+
+A las cadenas les podemos asignar diversas funciones:
+
+- len: nos indica la longitud de la cadena.
+- indexing: con esto podemos acceder a cada uno de los elementos de esta cadena a través de indices.
+- slicing: podemos dividir las cadenas subcadenas.
+
+```py
+my_str = 'Hello, world!'    # Creamos una cadena
+
+len(my_str)                 # Consultamos por su longitud
+13
+
+my_str[0]                   # Con slicing consultamos por el 1er caracter.
+'H'
+
+my_str[1]                   # Consultamos por el 2do caracter.
+'e'
+
+my_str[2]                   # Consultamos por el 3er caracter.
+'l'
+
+my_str[2:]                  # Traemos desde el 3er caracter hasta el final.
+'llo, world!'
+
+# Es importante indicar que los finales no son inclusivos.
+
+my_str[:3]                  # Tremos desde el principio hasta el 3ro.
+'Hel'
+
+my_str[2:5]                 # Traemos desde el 3er caracter hasta el 5to.
+'llo'
+
+my_str[::2]                 # Traemos desde el principio hasta el final saltando de 2 en 2.
+'Hlo ol!'
+```
+
+- Los objetos de tipo str pueden representarse con _comillas dobles (")_ o _comillas simples (')_
+- El operador _suma (+)_ tiene diferente significado según el tipo de dato. Con **cadenas** significa _concatenación_.
+- El operador _multiplicación (*)_ es el operador de _repetición_ con **cadenas**.
+- Las cadenas son **inmutables**. Esto significa que una vez que creamos una cadena en memoria esta ya no puede cambiar, podemos reasignar la variable que la referencia a otro valor, pero la cadena en memoria no cambiara.
+
+## Entradas
+
+Las **entradas** son una forma recibir información para que las computadoras logren realizas cómputos.
+
+- Python tiene la función input para recibir datos del usuario del programa
+- Input siempre regresa cadenas, por lo que si queremos utilizar otro tipo, tenemos que hacer _type casting_. El _type casting_ es **transformar** el tipo de dato en otro, con esto podemos transformar el tipo y guardarlo en memoria asignandolo a una variable.
+
+```bash
+nombre = input('Cual es tu nombre: ')   # Utilizamos input para ingresar un nombre
+Cual es tu nombre: Karl
+
+print(nombre) # Vemos que contiene nuestra variable nombre
+Karl
+
+print(f'Tu nombre es {nombre}')   # Imprimimos una cadena concatenando una oracion con nuestra variable.
+Tu nombre es Karl
+
+numero = input('Escribe un numero: ')   # Utilizamos input para ingresar un numero
+Escribe un numero: 45
+
+numero    # Vemos que contiene nuestra variable numero
+'45'
+
+type(numero)    # Vemos el tipo de dato que es numero
+<class 'str'>   # Y vemos que es un str
+
+numero = int(input('Escribe un numero: '))  # Pero si definimos previamente el input como int
+Escribe un numero: 45
+
+type(numero)    # Nuestra variable numero sera de tipo int
+<class 'int'>
+```
