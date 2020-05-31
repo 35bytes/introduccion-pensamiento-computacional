@@ -10,6 +10,7 @@
 - [Introducción al pensamiento computacional](#Introducción-al-pensamiento-computacional)
   - [Introducción al cómputo](#Introducción-al-cómputo)
   - [Lenguajes de programación](#Lenguajes-de-programación)
+  - [Preparación de tu computadora](#Preparación-de-tu-computadora)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -156,3 +157,26 @@ Todos los **lenguajes** tienen:
 - **Sintaxis:** Define la secuencia de símbolos que está bien formada.
 - **Semántica estática:** Define que enunciados con sintaxis correcta tienen significado.
 - **Semántica:** Define el significado. En los lenguajes de programación sólo hay un significado.
+
+## Preparación de tu computadora
+
+Antes de comenzar este curso asegúrate de preparar tu entorno de trabajo para poder hacer todos los ejercicios. A continuación te compartiré los pasos que debes seguir para configurar tu computadora.
+
+Si estás usando Windows asegúrate de instalar lo siguiente en tu computadora:
+
+### Python 3.7 (o superior)
+1. Para obtener el instalador dirígete a [https://www.python.org/downloads/](https://www.python.org/downloads/)
+2. Descarga el instalador y ejecútalo en tu computadora.
+3. Habilita la casilla de verificación en Install launcher for all users y Add Python 3.8 to PATH. A continuación presiona en Install Now. Windows te solicitará permisos para instalar Python en tu computadora.
+4. Al finalizar la instalación se abrirá una ventana, en ella deberás presionar en la opción Disable path length limit. Windows te solicitará permisos para realizar este cambio.
+
+### Visual Studio Code
+
+Visual Studio Code es un editor de textos que tiene integradas varias herramientas que te ayudarán a desarrollar tus ejercicios con facilidad. Para obtenerlo en tu computadora, dirígete a: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+1. Realiza una instalación normal de Visual Studio code.
+2. En Visual Studio Code dirígete al panel de Extensiones, se encuentra en el panel lateral izquierdo. Ahí deberás buscar la extensión llamada Python.
+3. Selecciona la extensión creada por Microsoft. Una vez seleccionada, instálala.
+4. Una vez instalada, reinicia Visual Studio Code.
+
+Listo con esto podrás correr los programas que escribas en python en la terminal de Visual Studio Code.
