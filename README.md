@@ -24,6 +24,7 @@
   - [Representación de flotantes](#Representación-de-flotantes)
   - [Enumeración exhaustiva](#Enumeración-exhaustiva)
   - [Aproximación de soluciones](#Aproximación-de-soluciones)
+  - [Búsqueda Binaria](#Búsqueda-Binaria)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -799,3 +800,56 @@ else:
 ```
 
 Puedes intentar ir moviendo la magnitud de epsilon para obtener una mejor precisión o mejorar el tiempo de ejecución.
+
+## Búsqueda Binaria
+
+Cuando la respuesta se encuentra en un conjunto ordenado, podemos utilizar **búsqueda binaria**. Es altamente eficiente, pues corta el espacio de búsqueda en dos por cada iteración. Los pasos que sigue son:
+
+1. Consideramos como segmento inicial de búsqueda a la lista completa.
+2. Analizamos el punto medio del segmento (el valor central), si es el valor buscado, devolvemos el índice del punto medio.
+3. Si el valor central es mayor al buscado, podemos descartar el segmento que está desde el punto medio hacia la a derecha.
+4. Si el valor central es menor al buscado, podemos descartar el segmento que está desde el punto medio hacia la izquierda.
+5. Una vez descartado el segmento que no nos interesa, volvemos a analizar el segmento restante, de la misma forma.
+6. Si en algún momento el segmento a analizar tiene longitud 0 o negativa significa que el valor buscado no se encuentra en la lista.
+
+Para verlo de forma gráfica buscaremos el valor 18 en la lista [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23].
+
+<br>
+<div align="center"> 
+  <img src="readme_img/busqueda-binaria.png" width="500">
+</div>
+<br>
+
+Para realizar un ejemplo práctico crearemos un programa para buscar raíces cuadradas.
+
+```py
+objetivo = int(input('Escoge un numero: '))
+
+epsilon = 0.01  # Definimos nuestro margen de error.
+
+bajo = 0.0      # Inicializamos la parte baja de nuestra busqueda como 0
+alto = max(1.0, objetivo)   # Entre el numero que ingresamos y 1 vamos a tomar el mayor valor.
+respuesta = (alto + bajo) / 2   # Definimos la mitad entre bajo y alto.
+
+# Mientras el margen de error sea mayor a epsilon.
+while abs(respuesta**2 - objetivo) >= epsilon:
+
+    # Si ((alto+bajo)/2)^2 es menor a nuestro numero objetivo
+    if respuesta**2 < objetivo:
+        
+        # Definimos la parte baja de nuestra busqueda como (alto + bajo)/2
+        bajo = respuesta
+
+    # En caso que (alto+bajo)/2 es mayor a nuestro numero objetivo
+    else: 
+        # Definimos la parte baja de nuestra busqueda como (alto + bajo)/2
+        alto = respuesta
+
+    # Luego definimos nuevamente la mitad entre alto y bajo.
+    respuesta = (alto + bajo) / 2
+
+# Cuando el ciclo ya alcance un error menor a epsilon imprimiremos el resultado.
+print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+```
+
+Este algoritmo es extremadamente rápido en comparación a los anteriores y esto es justamente lo que lo hace uno de los mas potentes.
