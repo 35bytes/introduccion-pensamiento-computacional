@@ -22,6 +22,7 @@
   - [Bucles for](#Bucles-for)
 - [Programas numéricos](#Programas-numéricos)
   - [Representación de flotantes](#Representación-de-flotantes)
+  - [Enumeración exhaustiva](#Enumeración-exhaustiva)
   
 
 # Introducción al pensamiento computacional
