@@ -18,6 +18,7 @@
   - [Cadenas](#Cadenas)
   - [Entradas](#Entradas)
   - [Programas ramificados](#Programas-ramificados)
+  - [Iteraciones](#Iteraciones)
   
 
 # Introducción al pensamiento computacional
@@ -439,7 +440,7 @@ type(numero)    # Nuestra variable numero sera de tipo int
 
 Para que nuestros programas realicen trabajos interesantes estos deben ser capaces de tomar decisiones, test o pruebas, es desde este concepto donde salen las **ramificaciones.** Dentro de los test que podemos realizar son los operadores de **comparación** y estos nos devolveras si la comparación es **verdadera (True)** o **falsa (False).**
 
-- **Igual (==)**: Lo utlizaremos para comparar 2 objetos.
+- **Igual (==)**: Lo utilizaremos para comparar 2 objetos.
 - **Distinto (!=)**: Verificamos que los objetos sean distintos.
 - **Mayor que (>)**: Igual que en algebra, comparamos si el primer termino es mayor que el segundo.
 - **Menor que (<)**: Verificamos que el primer termino sea menor que el segundo.
@@ -479,15 +480,15 @@ else:
 Para poner en práctica esto crearemos un archivo _programas_ramificados.py_ y dentro de el escribiremos:
 
 ```py
-num_1 = int(input('Escoge un entero: '))    # Preguntamos por un primer numero.
-num_2 = int(input('Escoge otro entero: '))  # Luego preguntamos por un segundo numero.
+num_1 = int(input('Escoge un entero: '))    # Preguntamos por un primer número.
+num_2 = int(input('Escoge otro entero: '))  # Luego preguntamos por un segundo número.
 
-if num_1 > num_2:       # Si el primer numero es mayor que el segundo.
-    print('El primer numero es mayor que el segundo.')  # Imprimimos esta expresión.
+if num_1 > num_2:       # Si el primer número es mayor que el segundo.
+    print('El primer número es mayor que el segundo.')  # Imprimimos esta expresión.
 elif num_1 < num_2:     # En caso de que el segundo sea mayor.
-    print('El segundo numero es mayor que el primero.') # Imprimiremos esta expresión.
+    print('El segundo número es mayor que el primero.') # Imprimiremos esta expresión.
 else:   # En caso de que no cumpla ninguna condición.
-    print('Los 2 numeros son iguales.')
+    print('Los 2 números son iguales.')
 ```
 
 Para ejecutar nuestro programa iremos a la terminal y escribiremos
@@ -496,20 +497,61 @@ Para ejecutar nuestro programa iremos a la terminal y escribiremos
 python3 la/dirección/relativa/de/tu/archivo/programas_ramificados.py
 ```
 
-y en consolo nos preguntara nuestros numeros y nos dara un resultado
+y en consolo nos preguntara nuestros números y nos dara un resultado
 
 ```
 Escoge un entero: 8
 Escoge otro entero: 4
-El primer numero es mayor que el segundo.
+El primer número es mayor que el segundo.
 ```
 ```
 Escoge un entero: 7
 Escoge otro entero: 10
-El segundo numero es mayor que el primero.
+El segundo número es mayor que el primero.
 ```
 ```
 Escoge un entero: 4
 Escoge otro entero: 4
-Los 2 numeros son iguales.
+Los 2 números son iguales.
+```
+
+## Iteraciones
+
+Las **iteraciones** nos permiten repetir las operaciones de una manera simple.
+
+- La mayoría de las tareas computacionales no se pueden lograr con ramificaciones.
+- Cuando queremos que un programa haga lo mismo varias veces, utilizaremos iteraciones.
+- Se pueden escribir iteraciones dentro de iteraciones.
+- Podemos utilizar _break_ para salir de una iteracion.
+- Tener cuidado de iteraciones infinitas.
+
+Para poner en práctica las iteracion crearemos el archivo _iteraciones.py_
+
+```py
+contador = 0
+
+while contador < 10:
+    print(contador)
+    contador += 1   # contador = contador + 1
+```
+
+Luego iremos a la consola para ejecutar nuestro archivo.
+
+```
+python3 la/dirección/relativa/de/tu/archivo/iteraciones.py
+```
+
+y veremos que en nuestra consola se imprimiran los números del 0 al 9.
+
+Si queremos que nuestro programa salga de la iteración cuando se cumpla cierta condición usaremos **break.**
+
+```py
+contador = 0
+
+while contador < 10:
+    print(contador)
+    contador += 1       # contador = contador + 1
+
+    if contador > 6:    # Cuando contador sea mayor que 6 terminara la iteracion.
+        break
 ```
