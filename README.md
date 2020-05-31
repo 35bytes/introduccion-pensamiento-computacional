@@ -10,7 +10,11 @@
 - [Introducción al pensamiento computacional](#Introducción-al-pensamiento-computacional)
   - [Introducción al cómputo](#Introducción-al-cómputo)
   - [Lenguajes de programación](#Lenguajes-de-programación)
+- [Introducción a Python](#Introducción-a-Python)
   - [Preparación de tu computadora](#Preparación-de-tu-computadora)
+  - [Elementos básicos de Python](#Elementos-básicos-de-Python)
+  - [Objetos, expresiones y tipos numéricos](Objetos,-expresiones-y-tipos-numéricos)
+  
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -158,6 +162,8 @@ Todos los **lenguajes** tienen:
 - **Semántica estática:** Define que enunciados con sintaxis correcta tienen significado.
 - **Semántica:** Define el significado. En los lenguajes de programación sólo hay un significado.
 
+# Introducción a Python
+
 ## Preparación de tu computadora
 
 Antes de comenzar este curso asegúrate de preparar tu entorno de trabajo para poder hacer todos los ejercicios. A continuación te compartiré los pasos que debes seguir para configurar tu computadora.
@@ -180,3 +186,104 @@ Visual Studio Code es un editor de textos que tiene integradas varias herramient
 4. Una vez instalada, reinicia Visual Studio Code.
 
 Listo con esto podrás correr los programas que escribas en python en la terminal de Visual Studio Code.
+
+## Elementos básicos de Python
+
+En esta sección veremos los elementos básicos de Python, sin embargo estaremos _aprendiendo_ sobre los **elementos básicos** de cualquier lenguaje de programación.
+
+En los lenguajes tenemos definiciones como:
+
+- Bajo nivel vs alto nivel: 
+  **Bajo nivel** significa que esta diseñado para las **máquinas**. **Alto nivel** por su parte es orientado a los **humanos.**
+
+- General vs dominio específico: Los lenguajes **generales** tienen todos los primitivos de Turing para poder implementar y computar cualquier tipo de algoritmo. Por otro lado los de **dominio específico** son lenguajes especializados a tareas muy específicas.
+
+- Interpretado vs compilado: En los lenguajes **interpretados** mientras corre el programa se traduce la instrucción a lenguaje máquina que para ejecutar, en cambio para los lenguajes **compilados** estos toman todas las instrucciones y las traduce _antes_ a lenguaje máquina.
+
+Python es un lenguaje de _alto nivel, general e interpretado_.
+
+Los elementos básicos son:
+
+- **Literales:** son formas simples de inicializar objetos directamente en memoria.
+  ```
+  literales = 1, 'abc', 2.0, True
+  ```
+
+- **Operadores:** son los operadores algebraicos.
+  ```
+  operadores = + / % ** = ==
+  ```
+
+Podemos interpolar _literales_ y _operadores_ en nuestros algoritmos. Si el significado dentro de nuestra instrucción no tiene sentido para el lenguaje nos devolverá el tipo de error que tengamos. Para iniciar en consola él interprete lo haremos escribiendo.
+
+```bash
+python3
+```
+
+Con esto dentro de la consola podremos escribir código de Python.
+
+```py
+>>> 1 + 2
+3
+
+>>> 1 3.0 # error sintáctico
+  File "<stdin>", line 1
+    1 3.0
+      ^
+SyntaxError: invalid syntax
+
+>>> 5 / 'Texto' # error semántico estático
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'int' and 'str'
+
+>>> 5 * 'Texto'
+'TextoTextoTextoTextoTexto'
+
+>>> print('Hello, world!') # statement o enunciado
+Hello, world!
+```
+
+## Objetos, expresiones y tipos numéricos
+
+Vamos hablar de **objetos, expresiones y tipos numéricos.**
+
+- **Objetos**: son la abstracción más alta de cualquier lenguaje de programación, son la forma en que modelamos el mundo dentro de nuestros programas. Los objetos se encuentran en memoria y podemos referenciarlas con algún tipo de variable.
+
+- **Tipos**: los _objetos_ pueden ser enteros, flotantes, booleanos e incluso pueden ser objetos más complejos como el modelo de un humano con todos sus características y atributos. 
+
+- **Escalares vs no escalares**: los **escalares** son datos que podemos subdividir en piezas fundamentales, estos pueden ser enteros, flotantes, etc. Los **no escalares** son los datos que no podemos _subdividir_.
+
+```py
+>>> <objeto> <operador> <objeto>  # Esta es una expresión
+<valor>
+
+>>> 'Estoy' + 'Programando!'      # Con esta expresión
+'EstoyProgramando!'               # Obtenemos este valor
+
+>>> 2 + 2                         # Con esta expresión
+4                                 # Obtenemos este valor
+```
+
+En Python podemos ver los tipos de datos que contienen nuestros objetos _(variables)_, para esto usamos la función **Type.**
+
+```bash
+>>> my_int = 1
+>>> my_float = 1.0
+>>> my_bool = False
+>>> my_none = None
+
+# Imprimiremos los tipos de nuestras variables.
+
+>>> type(my_int)
+<class 'int'> 
+
+>>> type(my_float)
+<class 'float'>
+
+>>> type(my_bool)
+<class 'bool'>
+
+>>> type(my_none)
+<class 'NoneType'>
+```
