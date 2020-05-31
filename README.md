@@ -20,6 +20,7 @@
   - [Programas ramificados](#Programas-ramificados)
   - [Iteraciones](#Iteraciones)
   - [Bucles for](#Bucles-for)
+- [Programas numéricos](#Programas-numéricos)
   - [Representación de flotantes](#Representación-de-flotantes)
   
 
@@ -694,6 +695,8 @@ Podemos modificar el comportamiento de un bucle **for** mediante los _keywords_ 
 
 Como pudimos observar, Python implementa los bucles definidos mediante los bucles **for**. Esta implementación nos permite iterar a lo largo de cualquier objeto que sea iterable. Para iterar necesitamos un iterador que nos regresará el siguiente valor en cada iteración. Todo esto, Python lo puede hacer por nosotros con el constructo **for ... in ...**.
 
+# Programas numéricos
+
 ## Representación de flotantes
 
 La mayoría del tiempo los números flotantes (tipo **float**) son una muy buena aproximación de los números que queremos calcular con nuestras computadoras. Sin embargo, “la mayoría del tiempo” no significa todo el tiempo, y cuando no se comportan de esta manera puede tener consecuencias inesperadas.
@@ -747,3 +750,26 @@ En la mayoría de las implementaciones de Python tenemos 53 bits de precisión p
 Muy cercano a 1/10 pero no exactamente 1/10. Ahora ya sabemos la razón de esa respuesta tan extraña. Hay muy pocas situaciones en la que 1.0 es aceptable, pero 0.9999999999999999 no. Pero ¿Cuál es la moraleja de esta historia?
 
 Hasta ahora hemos verificado igualdad con el operador **==**. Sin embargo, cuando estamos trabajando con flotantes es mejor asegurarnos que los números sean aproximados en vez de idénticos. Por ejemplo **x < 1.0 and x > 0.99999**.
+
+## Enumeración exhaustiva
+
+También llamado "adivina y verifica" donde simplemente generamos todas las posibilidades. Técnicamente este no es un algoritmo eficiente, sin embargo, dependiendo del universo de posibilidades puede ser que sea el mas adecuado, ya que _las computadoras actuales son muy rapidas_ y por lo tanto la eficiencia de nuestro programa no es relevante, por lo tanto siempre ten en mente este tipo de **algoritmo** como uno de los **primeros en implementar**.
+
+Vamos a crear un ejemplo de enumeración exhaustiva buscando la raíz cuadrada exacta de un numero.
+
+```py
+objetivo = int(input('Escoge un entero: '))
+
+# Inicializamos respuesta como 0
+respuesta = 0
+
+# Mientras respuesta^2 sea menor que nuestro numero objetivo.
+while respuesta**2 < objetivo:
+    respuesta += 1  # Respuesta aumentara en 1.
+
+if respuesta**2 == objetivo:
+    print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+
+else:
+    print(f'{objetivo} no tinene una raiz cuadrada exacta')
+```
