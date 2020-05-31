@@ -9,6 +9,7 @@
 # Tabla de contenido
 - [Introducción al pensamiento computacional](#Introducción-al-pensamiento-computacional)
   - [Introducción al cómputo](#Introducción-al-cómputo)
+  - [Lenguajes de programación](#Lenguajes-de-programación)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -95,7 +96,7 @@ Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son ma
 </div>
 <br>
 
-**Richar Feyman** nos dio las bases del computo cuantico, el pensaba que no podiamos simular los sistemas cuanticos si no teniamos una computadora cuantica, por lo cual hoy en día estamos en la carrera de la **computación cuantica.**
+**Richar Feyman** nos dio las bases del computo cuantico, el pensaba que no podiamos simular los sistemas cuanticos si no teniamos una computadora cuántica, por lo cual hoy en día estamos en la carrera de la **computación cuantica.**
 
 <br>
 <div align="center"> 
@@ -104,3 +105,54 @@ Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son ma
   <h5>Richard Feyman y una computadora cuántica respectivamente.</h5>
 </div>
 <br>
+
+## Lenguajes de programación
+
+¿Cómo le damos instrucciones a las computadoras? Primero debemos saber que existen **conocimiento declarativo e imperativo.** El conocimiento **declarativo** define las relaciones que existen entre diversas variables, por ejemplo una fórmula matemática. En el caso del **imperativo** nos dice como llegar a un resultado, y dentro de este existen los **algoritmos.**
+
+Un **algoritmo** es una _lista finita de instrucciones_ que describen un cómputo, que cuando se ejecuta con ciertas entradas _(inputs)_ ejecuta pasos intermedios para llegar a un resultado _(output)_. Los algoritmos se conocen desde los antiguos griegos, y fue la evolución de estos que nos dieron los primeros **lenguajes de programación.**
+
+**Ada Lovelace** se dio cuenta que con las bases teóricas del _motor analítico_ podía calcular una serie de los _números_ de Bernoulli_, y así creo el primer programa de computación.
+
+<br>
+<div align="center"> 
+  <img src="readme_img/lovelace.jpg" width="350">
+  <h5>Ada Lovelace</h5>
+</div>
+<br>
+
+**Grace Murray Hopper** fue pionera en el mundo de las ciencias de la computación y la primera programadora que utilizó el _Mark I_. Entre las décadas de los 50 y 60 desarrolló el primer compilador para un lenguaje de programación así como también propició métodos de validación. Grace se le ocurrió la idea de tomar unas instrucciones de 1 y 0 para simplificarlos en una instrucción mas entendible para las personas, idea que fue el punta pie inicial para los **lenguajes de programación modernos.**
+
+<br>
+<div align="center"> 
+  <img src="readme_img/Grace-Murray-Hopper.jpg" width="350">
+  <h5>Grace Murray Hopper</h5>
+</div>
+<br>
+
+En el sentido de la idea de los lenguajes de programación llega **Dennis Ritchie**, el cual fue el inventor del lenguaje _C_, posiblemente uno de los lenguajes mas importantes de la historia.
+
+<br>
+<div align="center"> 
+  <img src="readme_img/dennis-ritchie.jpg" width="350">
+  <h5>Dennis Ritchie</h5>
+</div>
+<br>
+
+
+**Guido van Rossum**, tenia en mente crear un lenguaje de programación que fuera lo mas comprensible posible, eliminando símbolos y sintaxis extrañas, cercano al lenguaje natural. Fue por esta idea en donde nació _Python_.
+
+<br>
+<div align="center"> 
+  <img src="readme_img/van-rossum.jpg" width="350">
+  <h5>Guido van Rossum</h5>
+</div>
+<br>
+
+
+Los **lenguajes de programación** modernos se les conoce como **Turing completeness** ya que implementan todos los principios para implementar cualquier tipo de _algoritmo._
+
+Todos los **lenguajes** tienen:
+- **Sintaxis:** Define la secuencia de símbolos que está bien formada.
+- **Semántica estática:** Define que enunciados con sintaxis correcta tienen significado.
+- **Semántica:** Define el significado. En los lenguajes de programación sólo hay un significado.
