@@ -13,7 +13,8 @@
 - [Introducción a Python](#Introducción-a-Python)
   - [Preparación de tu computadora](#Preparación-de-tu-computadora)
   - [Elementos básicos de Python](#Elementos-básicos-de-Python)
-  - [Objetos, expresiones y tipos numéricos](Objetos,-expresiones-y-tipos-numéricos)
+  - [Objetos, expresiones y tipos numéricos](#Objetos,-expresiones-y-tipos-numéricos)
+  - [Asignación de variables](#Asignación-de-variables)
   
 
 # Introducción al pensamiento computacional
@@ -287,3 +288,48 @@ En Python podemos ver los tipos de datos que contienen nuestros objetos _(variab
 >>> type(my_none)
 <class 'NoneType'>
 ```
+
+## Asignación de variables
+
+Las **variables** son simplemente _nombres_ que se vinculan con un _valor en memoria_, y la forma en la que los _vinculamos_ es a través del **operador de asignación (=)**, y para _comparar_ su valor utilizamos **2 veces el operador de asignación (==).** La forma correcta de nombrar nuestras variables es darles un nombre _descriptivo_.
+
+```py
+# Tenemos unas variables que no entendemos que representan
+a = 2
+x = 4
+z = (a * x) / 2
+
+# Y las cambiamos por unas mas descriptivas
+base = 2
+altura = 4
+area = (base * altura) / 2
+```
+
+También podemos **reasignar** valores a nuestras _variables_.
+
+```bash
+# A my_var le asignamos un valor
+>>> my_var = 'Hello, world'
+>>> print(my_var)
+Hello, world
+
+# Luego reasignamos otro valor
+>>> my_var = 3
+>>> print(my_var)
+3
+```
+
+Cuando el espacio en memoria ya no tiene ninguna variable que la referencie, el **garabage collector** libera este espacio.
+
+Cada uno de los lenguajes de programación tiene sus reglas. Algunas reglas para las variables en Python son:
+
+- Pueden contener mayúsculas, minusculas, numeros(sin comenzar con uno) y el simbolo _
+- No pueden llamarse como las **palabras reservadas**.
+
+Los lenguajes tienen algo llamado **palabras reservadas**, estas son objetos dentro del lenguaje que ya tienen alguna función o valor asignado.
+
+<br>
+<div align="center"> 
+  <img src="readme_img/reserved-words-python.png" width="500">
+</div>
+<br>
