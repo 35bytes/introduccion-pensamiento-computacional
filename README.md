@@ -25,6 +25,7 @@
   - [Enumeración exhaustiva](#Enumeración-exhaustiva)
   - [Aproximación de soluciones](#Aproximación-de-soluciones)
   - [Búsqueda Binaria](#Búsqueda-Binaria)
+- [Funciones, alcance y abstracción](#Funciones,-alcance-y-abstracción)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -853,3 +854,58 @@ print(f'La raiz cuadrada de {objetivo} es {respuesta}')
 ```
 
 Este algoritmo es extremadamente rápido en comparación a los anteriores y esto es justamente lo que lo hace uno de los mas potentes.
+
+# Funciones, alcance y abstracción
+
+## Funciones y abstracción
+
+La **abstracción** significa que no necesitas entender como funciona algo para utilizarlo. Un ejemplo de esto es una _calculadora_, en este caso no muchos saben como funciona el circuito interno de una calculadora, sin embargo esto no nos limita a utilizarlo, ya que solo necesitamos saber como operarlo.
+
+Una de las habilidades mas importantes en la programación es la **abstracción**, ya que utilizaremos la mayoria del tiempo códigos y librerias de otras personas, por lo que solamente debemos saber operarlos.
+
+La **decomposición** nos permite dividir el código en **componentes (funciones)** que colaboran con un fin en común. Esto se puede pensar como mini programas dentro de un programa mayor.
+
+Para poder escribir una **función** en _Python_ lo hacemos con **def**
+
+```py
+# Las funciones se definen con 'def' luego del nombre y los parametros que necesitara.
+def nombre(parametros):
+
+    # Ejecutamos las expresiones que necesitemos
+    cuerpo
+
+    # Y retornaremos el valor que queramos. El return no es obligatorio.
+    return expresion
+
+# Aqui definimos una función suma
+def suma(a, b):
+    total = a + b
+    return total
+
+# Y para ejecutarlo simplemente llamamos a la
+# función por su nombre e ingresamos los parámetros que necesita
+suma(2, 3)
+```
+En las funciones existen los **valores por defecto**, esto significa que en caso de que no se ingrese el argumento este ya tendra un **valor por defecto.** Tambien existen los keywords que significa que al llamar la funcion podemos llamar al nombre del argumento para asignarles un valor.
+
+```py
+# Definimos una funcion con valor por defecto de "inverso = False"
+def nombre_completo(nombre, apellido, inverso=False)
+    if inverso:
+        return f'{apellido} {nombre}'
+    else:
+        return f'{nombre} {apellido}'
+
+# De forma ordena ingreso los valores a los parametros de la función.
+# Sin embargo no es necesario ingresar un valor para "inverso" ya que
+# tiene un valor por defecto ya asignado
+nombre_completo('Karl', 'Behrens')
+
+# En este caso ingresaremos el valor "True" para "inverso"
+nombre_completo('Karl', 'Behrens', inverso=True)
+
+# Con Keywords podemos ingresar las variables en el orden que
+# deseamos mientras llamemos el valor del parametro y
+# le asignamos el valor.
+nombre_completo(apellido='Behrens', nombre='Karl')
+```
