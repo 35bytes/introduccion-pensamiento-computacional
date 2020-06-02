@@ -28,6 +28,7 @@
 - [Funciones, alcance y abstracción](#Funciones,-alcance-y-abstracción)
   - [Funciones y abstracción](#Funciones-y-abstracción)
   - [Scope o Alcance](#Scope-o-Alcance)
+  - [Especificaciones del código](#Especificaciones-del-código)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -933,3 +934,24 @@ func1(un_arg, cualquier_func)
 ```
 
 El uso de las variables y acceso a el a lo largo de nuestro código se llama **scope.**
+
+## Especificaciones del código
+
+La especificacion del código es un **comentario** en el que informamos de forma **explicita** y **concisa** lo que realizan nuestras instrucciones. Tenemos que tener 3 items importantes en la documentación:
+
+- Que hace la instrucción.
+- Que significan los parametros.
+- Que es lo que devuelve nuestra instrucción.
+
+```py
+def suma(a, b):
+    """Suma dos valores a y b
+
+    param int a cualquier entero
+    param int b cualquier entero
+    returns la sumatoria de a y b
+    """
+
+    total = a + b
+    return total
+```
