@@ -26,6 +26,8 @@
   - [Aproximación de soluciones](#Aproximación-de-soluciones)
   - [Búsqueda Binaria](#Búsqueda-Binaria)
 - [Funciones, alcance y abstracción](#Funciones,-alcance-y-abstracción)
+  - [Funciones y abstracción](#Funciones-y-abstracción)
+  - [Scope o Alcance](#Scope-o-Alcance)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -909,3 +911,25 @@ nombre_completo('Karl', 'Behrens', inverso=True)
 # le asignamos el valor.
 nombre_completo(apellido='Behrens', nombre='Karl')
 ```
+
+## Scope o Alcance
+
+Cuando ejecutamos una función esto significa que el lenguaje de programación entrara en un nuevo contexto de ejecución, y en este contexto se le asigna ciertas variables de los cuales tenemos acceso a través del código. Sin importar que declaremos una variable, si no hacemos uso de este no tendremos acceso a él.
+
+```py
+def func1(un_arg, una_func):
+    def func2(otro_arg):
+        return otro_arg * 2
+
+    valor = func2(un_arg)
+    return una_func(valor)
+
+un_arg = 1
+
+def cualquier_func(cualquier_arg):
+    return cualquier_arg + 5
+
+func1(un_arg, cualquier_func)
+```
+
+El uso de las variables y acceso a el a lo largo de nuestro código se llama **scope.**
