@@ -29,6 +29,7 @@
   - [Funciones y abstracción](#Funciones-y-abstracción)
   - [Scope o Alcance](#Scope-o-Alcance)
   - [Especificaciones del código](#Especificaciones-del-código)
+  - [Recursividad](#Recursividad)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -954,4 +955,37 @@ def suma(a, b):
 
     total = a + b
     return total
+```
+
+## Recursividad
+
+La recursividad se puede definir de 2 formas:
+
+- **Algorítmica:** Una forma de crear soluciones utilizando el principio de "divide y venceras". Esto significa que podemos resolver un problema dividiendolo en pequeñas versiones mas simple e ir resolviendolos de a poco.
+
+- **Programática:** Una técnica programática mediante la cual una función se llama a sí misma.
+
+Para ver la recursividad **programática** lo haremos dentro de un ejemplo práctico. En este ejemplo programaremos una función para devolver el valor de un numero _factorial._
+
+```py
+def factorial(n):
+    """Calcula el factorial de n
+
+    n int > 0
+    return n!
+    """
+
+    # Para que la recursividad no sea infinita
+    # definimos en que momento terminara.
+    if n == 1:
+        return 1
+
+    # Llamamos a la funcion "factorial" a si misma
+    # pero el valor de n va disminuyendo en 1
+    # a medida que se repite su llamado.
+    return n * factorial(n - 1)
+
+n = int(input('Escribe un entero: '))
+
+print(factorial(n))
 ```
