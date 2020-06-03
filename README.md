@@ -79,7 +79,7 @@ Después llego el **motor analítico de Charles Babbage**, el cual ocupo la tecn
 </div>
 <br>
 
-Durante el siglo IXX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llego la **máquina tabuladora**, la cual se utilizo para realizar los censos con tarjetas, obteniendo resultados mas rápidos y certeros.
+A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llego la **máquina tabuladora**, la cual se utilizo para realizar los censos con tarjetas, obteniendo resultados mas rápidos y certeros.
 
 <br>
 <div align="center"> 
