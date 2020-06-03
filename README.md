@@ -35,8 +35,7 @@
   - [Tuplas](#Tuplas)
   - [Rangos](#Rangos)
   - [Listas y mutabilidad](#Listas-y-mutabilidad)
-  - [Clonación](#Clonación)
-  - [List comprehension](#List-comprehension)
+  - [Diccionarios](#Diccionarios)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1239,7 +1238,7 @@ b
 """Por esto debes tener mucho ojo al modificar las listas."""
 ```
 
-## Clonación
+### Clonación
 
 Casi siempre es mejor **clonar** una _lista_ en vez de mutarla, esto nos ayuda a disminuir el riesgo de pérdida de la información. Para **clonar** una _lista_ podemos utilizar rebanadas (slices) o la función **list.**
 
@@ -1264,7 +1263,7 @@ b
 [1, 2, 3]
 ```
 
-## List comprehension
+### List comprehension
 
 Es una forma concisa de aplicar operaciones a los valores de una secuencia. También se pueden aplicar condiciones para filtrar.
 
@@ -1299,4 +1298,102 @@ pares = [i for i in my_list if i % 2 == 0]
 """Y si revisamos los elementos de la lista veremos"""
 pares
 [0, 2, 4, 6, 8]
+```
+
+## Diccionarios
+
+Los **diccionarios** son como listas, pero en lugar de usar índices utilizan **llaves**. Estos **no tienen un orden interno**, son **mutables** y pueden **iterarse.**
+
+```py
+"""Creamos un diccionario utilizando los simbolos {} y debemos
+darle un nombre a cada llave"""
+my_dict = {
+    'nombre': 'Karl',
+    'apellido': 'Behrens',
+    'edad': 26
+}
+
+
+"""Para acceder algún dato de nuestro diccionario simplemente
+llamamos nuestro diccionario y la llave"""
+my_dict['apellido']
+'Behrens'
+
+###########################################################
+
+"""Si queremos acceder a una llave pero la llave no existe, 
+podemos definir que nos devuelva una respuesta predeterminada"""
+my_dict.get('email', 30)
+30
+
+
+"""Si llamamos una llave válida tendremos su valor"""
+my_dict.get('nombre', 30)
+'Karl'
+
+###########################################################
+
+"""Para reasignar un valor simplemente lo hacemos
+referenciando su llave"""
+
+my_dict
+{'nombre': 'Karl', 'apellido': 'Behrens', 'edad': 26}
+
+my_dict['edad'] = 30
+
+"""Vemos que la el valor de edad cambio"""
+
+my_dict
+{'nombre': 'Karl', 'apellido': 'Behrens', 'edad': 30}
+
+###########################################################
+
+"""Si queremos eliminar un elemento lo
+haremos con el método del y referenciado su llave"""
+
+del my_dict['edad']
+
+my_dict
+{'nombre': 'Karl', 'apellido': 'Behrens'}
+
+###########################################################
+
+"""Para obtener las llaves de nuestro diccionario
+realizamos un metodo for loop."""
+
+for llave in my_dict.keys():
+    print(llave)
+
+nombre
+apellido
+
+
+"""Y para los valores es muy parecido"""
+
+for valor in my_dict.values():
+    print(valor)
+
+Karl
+Behrens
+
+
+"""Tambien podemos combinar estos for loops"""
+
+for llave, valor in my_dict.items():
+    print(llave, valor)
+
+nombre Karl
+apellido Behrens
+
+###########################################################
+
+"""Si deseamos revisar si una llave existe en nuestro diccionario
+lo hacemos con un in"""
+
+'email' in my_dict
+False
+
+
+'apellido' in my_dict
+True
 ```
