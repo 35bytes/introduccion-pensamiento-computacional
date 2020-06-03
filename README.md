@@ -34,6 +34,9 @@
 - [Tipos estructurados, mutabilidad y funciones de alto nivel](#Tipos-estructurados,-mutabilidad-y-funciones-de-alto-nivel)
   - [Tuplas](#Tuplas)
   - [Rangos](#Rangos)
+  - [Listas y mutabilidad](#Listas-y-mutabilidad)
+  - [Clonación](#Clonación)
+  - [List comprehension](#List-comprehension)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -771,10 +774,10 @@ Vamos a crear un ejemplo de enumeración exhaustiva buscando la raíz cuadrada e
 ```py
 objetivo = int(input('Escoge un entero: '))
 
-# Inicializamos respuesta como 0
+"""Inicializamos respuesta como 0"""
 respuesta = 0
 
-# Mientras respuesta^2 sea menor que nuestro numero objetivo.
+"""Mientras respuesta^2 sea menor que nuestro numero objetivo."""
 while respuesta**2 < objetivo:
     respuesta += 1  # Respuesta aumentara en 1.
 
@@ -876,45 +879,45 @@ La **decomposición** nos permite dividir el código en **componentes (funciones
 Para poder escribir una **función** en _Python_ lo hacemos con **def**
 
 ```py
-# Las funciones se definen con 'def' luego del nombre y los parametros que necesitara.
+"""Las funciones se definen con 'def' luego del nombre y los parametros que necesitara."""
 def nombre(parametros):
 
-    # Ejecutamos las expresiones que necesitemos
+    """Ejecutamos las expresiones que necesitemos"""
     cuerpo
 
-    # Y retornaremos el valor que queramos. El return no es obligatorio.
+    """Y retornaremos el valor que queramos. El return no es obligatorio."""
     return expresion
 
-# Aqui definimos una función suma
+"""Aqui definimos una función suma"""
 def suma(a, b):
     total = a + b
     return total
 
-# Y para ejecutarlo simplemente llamamos a la
-# función por su nombre e ingresamos los parámetros que necesita
+"""Y para ejecutarlo simplemente llamamos a la
+función por su nombre e ingresamos los parámetros que necesita"""
 suma(2, 3)
 ```
 En las funciones existen los **valores por defecto**, esto significa que en caso de que no se ingrese el argumento este ya tendra un **valor por defecto.** Tambien existen los keywords que significa que al llamar la funcion podemos llamar al nombre del argumento para asignarles un valor.
 
 ```py
-# Definimos una funcion con valor por defecto de "inverso = False"
+"""Definimos una funcion con valor por defecto de "inverso = False"""
 def nombre_completo(nombre, apellido, inverso=False)
     if inverso:
         return f'{apellido} {nombre}'
     else:
         return f'{nombre} {apellido}'
 
-# De forma ordena ingreso los valores a los parametros de la función.
-# Sin embargo no es necesario ingresar un valor para "inverso" ya que
-# tiene un valor por defecto ya asignado
+"""De forma ordena ingreso los valores a los parametros de la función.
+Sin embargo no es necesario ingresar un valor para "inverso" ya que
+tiene un valor por defecto ya asignado"""
 nombre_completo('Karl', 'Behrens')
 
-# En este caso ingresaremos el valor "True" para "inverso"
+"""En este caso ingresaremos el valor 'True' para 'inverso' """
 nombre_completo('Karl', 'Behrens', inverso=True)
 
-# Con Keywords podemos ingresar las variables en el orden que
-# deseamos mientras llamemos el valor del parametro y
-# le asignamos el valor.
+"""Con Keywords podemos ingresar las variables en el orden que
+deseamos mientras llamemos el valor del parametro y
+le asignamos el valor."""
 nombre_completo(apellido='Behrens', nombre='Karl')
 ```
 
@@ -1072,40 +1075,40 @@ Las **tuplas** son secuencias inmutables _(no se pueden modificar)_ de objetos, 
 ```py
 def coordenadas():
 
-    # En nuestra función devolveremos la tupla (5, 4).
+    """En nuestra función devolveremos la tupla (5, 4)."""
     return (5,4)
 
-# Si ejecutamos la función vamos a recibir la tupla.
+"""Si ejecutamos la función vamos a recibir la tupla."""
 >>> coordenadas()
 (5,4)
 
-# Tambien podemos "desempaquetar" la tupla que recibimos,
-# esto significa que podemos asignar cada valor que nos llega de la
-# tupla a variables que definamos.
+"""Tambien podemos "desempaquetar" la tupla que recibimos,
+esto significa que podemos asignar cada valor que nos llega de la
+tupla a variables que definamos."""
 >>> x, y = coordenadas()
 
-# Si imprimimos la primera variable desempaquetada veremos
-# el primer valor de la tupla.
+"""Si imprimimos la primera variable desempaquetada veremos
+el primer valor de la tupla."""
 >>> x
 5
 
-# Y muy parecido al ejemplo anterior, con nuestra
-# variable "y" tendremos el segundo valor.
+"""Y muy parecido al ejemplo anterior, con nuestra
+variable "y" tendremos el segundo valor."""
 >>> y
 4
 ```
 
 ## Rangos
 
-Los **rangos** representan una secuencia de _enteros_ y se escriben como **range(comienzo, fin, pasos)** _pasos es un argumento opcional_. Al igual que las cadenas y las tuplas, los rangos son _inmutables_. Los **rangos** son muy eficientes en uso de memoria y normalmente utilizados en _for loops_.
+Los **rangos** representan una secuencia de _enteros_ y se escriben como **range(comienzo, fin, pasos)** _comienzo y pasos son argumentos opcionales_. Al igual que las cadenas y las tuplas, los rangos son _inmutables_. Los **rangos** son muy eficientes en uso de memoria y normalmente utilizados en _for loops_.
 
 ```py
-# Creamos un rango del 0 al 5 (el ultimo numero no se incluye)
+"""Creamos un rango del 0 al 5 (el ultimo numero no se incluye)"""
 my_range = range(0, 5)
 
-# Si realizamos un for loop en nuestro rango
-# e imprimimos el valor de i veremos
-# que nos imprime desde el 0 al 4.
+"""Si realizamos un for loop en nuestro rango
+e imprimimos el valor de i veremos
+que nos imprime desde el 0 al 4."""
 for i in my_range:
     print(i)
 
@@ -1117,14 +1120,14 @@ for i in my_range:
 
 ########################################################
 
-# Creamos un rango del 0 al 7, pero esta
-# vez ira saltando de 2 en 2.
+"""Creamos un rango del 0 al 7, pero esta
+vez ira saltando de 2 en 2."""
 my_other_range = range(0, 7, 2)
 
-# Si realizamos un for loop en nuestro rango
-# e imprimimos el valor de i veremos
-# que nos imprime desde el 0 al 6
-# saltando de 2 en 2
+"""Si realizamos un for loop en nuestro rango
+e imprimimos el valor de i veremos
+que nos imprime desde el 0 al 6
+saltando de 2 en 2."""
 for i in my_other_range:
     print(i)
 
@@ -1135,14 +1138,14 @@ for i in my_other_range:
 
 ########################################################
 
-# Creamos un rango del 0 al 8
+"""Creamos un rango del 0 al 8"""
 another_range = range(0, 8, 2)
 
-# Si realizamos un for loop en nuestro rango
-# e imprimimos el valor de i veremos
-# que nos imprime desde el 0 al 6
-# saltando de 2 en 2. El 8 no se imprime
-# ya que el último número del el rango no se incluye.
+"""Si realizamos un for loop en nuestro rango
+e imprimimos el valor de i veremos
+que nos imprime desde el 0 al 6
+saltando de 2 en 2. El 8 no se imprime
+ya que el último número del el rango no se incluye."""
 for i in my_other_range:
     print(i)
 
@@ -1150,4 +1153,150 @@ for i in my_other_range:
 2
 4
 6
+```
+
+## Listas y mutabilidad
+
+Las **listas** son secuencias de objetos, pero a diferencia de las [tuplas](#Tuplas) y [rangos](#Rangos), **sí son mutables**. Es posible _iterar_ con ellas, y cuando _modificas_ una lista, pueden existir efectos secundarios _(side effects)_.
+
+Para modificar una lista podemos:
+- Asignar vía índice (_my_lista[0] = 5_)
+- Utilizar los métodos de la lista (_append, pop, remove, insert, etc._)
+
+```py
+"""Vamos a generar nuestra primera lista"""
+my_list = [1, 2, 3]
+
+"""Para acceder al primer índice lo haremos de la siguiente forma"""
+my_list[0]
+1
+
+########################################################
+
+"""Si queremos utilizar la notación de slices (dividir) definimos los
+índices en los que dividiremos nuestra lista."""
+
+"""Aquí llamaremos desde el 2do indice hasta el final."""
+my_list[1:]
+[2, 3]
+
+########################################################
+
+"""Para agregar un item a nuestra lista lo haremos con la funcion append
+my_list.append(4)"""
+
+"""Ahora la lista tendra 4 objetos."""
+print(my_list)
+[1, 2, 3, 4]
+
+########################################################
+
+"""Para modificar un elemento podemos hacerlo
+referenciando su índice"""
+my_list[0] = 'a'
+print(my_list)
+['a', 2, 3, 5]
+
+########################################################
+
+"""El método pop eliminara el último elemento de nuestra lista"""
+my_list.pop()
+4
+
+print(my_list)
+['a', 2, 3]
+
+########################################################
+
+"""Cuando una variable hace referencía a una lista
+significa que apunta al mismo espacio en memoria,
+esto significa que si cambia la lista se vera reflejado
+en todas sus referencias, esto es un side effect"""
+
+"""Creamos la lista a"""
+a = [1, 2, 3]
+
+"""Creamos la lista b que hara referencía a la lista a"""
+b = a
+
+"""Si imprimimos las listas seran iguales"""
+a
+[1, 2, 3]
+
+b
+[1, 2, 3]
+
+"""Si agrego un objeto a la lista a también se
+vera reflejado en b"""
+a.append(4)
+
+a
+[1, 2, 3, 4]
+
+b
+[1, 2, 3, 4]
+
+"""Por esto debes tener mucho ojo al modificar las listas."""
+```
+
+## Clonación
+
+Casi siempre es mejor **clonar** una _lista_ en vez de mutarla, esto nos ayuda a disminuir el riesgo de pérdida de la información. Para **clonar** una _lista_ podemos utilizar rebanadas (slices) o la función **list.**
+
+```py
+"""Crearemos una lista a"""
+a = [1, 2, 3]
+
+"""Con la variable b clonaremos la lista a"""
+b = list(a)
+
+"""Si removemos el último elemento de a
+no se vera reflejado en b"""
+a.pop()
+3
+
+"""Veamos los elementos de a"""
+a
+[1,2]
+
+"""Y los elementos de b"""
+b
+[1, 2, 3]
+```
+
+## List comprehension
+
+Es una forma concisa de aplicar operaciones a los valores de una secuencia. También se pueden aplicar condiciones para filtrar.
+
+```py
+"""Vamos a crear una lista con una operacion de range"""
+my_list = list(range(10))
+
+
+"""Si revisamos que contiene veremos que tiene todos
+los numeros desde el 0 al 9"""
+my_list
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+###########################################################
+
+"""Ahora aplicaremos un list comprehension en donde
+vamos a multiplicar * 2 cada uno de los elementos"""
+double = [i * 2 for i in my_list]
+
+
+"""Y si revisamos los elementos de la lista veremos"""
+double
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+###########################################################
+
+"""Otro ejemplo de list compregension puede ser
+solo tomar los numeros pares de nuestra lista"""
+pares = [i for i in my_list if i % 2 == 0]
+
+
+"""Y si revisamos los elementos de la lista veremos"""
+pares
+[0, 2, 4, 6, 8]
 ```
