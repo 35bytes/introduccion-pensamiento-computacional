@@ -33,6 +33,7 @@
   - [Funciones como objetos](#Funciones-como-objetos)
 - [Tipos estructurados, mutabilidad y funciones de alto nivel](#Tipos-estructurados,-mutabilidad-y-funciones-de-alto-nivel)
   - [Tuplas](#Tuplas)
+  - [Rangos](#Rangos)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1092,4 +1093,61 @@ def coordenadas():
 # variable "y" tendremos el segundo valor.
 >>> y
 4
+```
+
+## Rangos
+
+Los **rangos** representan una secuencia de _enteros_ y se escriben como **range(comienzo, fin, pasos)** _pasos es un argumento opcional_. Al igual que las cadenas y las tuplas, los rangos son _inmutables_. Los **rangos** son muy eficientes en uso de memoria y normalmente utilizados en _for loops_.
+
+```py
+# Creamos un rango del 0 al 5 (el ultimo numero no se incluye)
+my_range = range(0, 5)
+
+# Si realizamos un for loop en nuestro rango
+# e imprimimos el valor de i veremos
+# que nos imprime desde el 0 al 4.
+for i in my_range:
+    print(i)
+
+0
+1
+2
+3
+4
+
+########################################################
+
+# Creamos un rango del 0 al 7, pero esta
+# vez ira saltando de 2 en 2.
+my_other_range = range(0, 7, 2)
+
+# Si realizamos un for loop en nuestro rango
+# e imprimimos el valor de i veremos
+# que nos imprime desde el 0 al 6
+# saltando de 2 en 2
+for i in my_other_range:
+    print(i)
+
+0
+2
+4
+6
+
+########################################################
+
+# Creamos un rango del 0 al 8
+another_range = range(0, 8, 2)
+
+# Si realizamos un for loop en nuestro rango
+# e imprimimos el valor de i veremos
+# que nos imprime desde el 0 al 6
+# saltando de 2 en 2. El 8 no se imprime
+# ya que el último número del el rango no se incluye.
+for i in my_other_range:
+    print(i)
+
+0
+2
+4
+6
 ```
