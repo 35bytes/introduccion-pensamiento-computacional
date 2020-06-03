@@ -39,6 +39,7 @@
 - [Pruebas y debbugging](#Pruebas-y-debbugging)
   - [Pruebas de caja negra](#Pruebas-de-caja-negra)
   - [Pruebas de caja de cristal](#Pruebas-de-caja-de-cristal)
+  - [Debugging](#Debugging)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1506,3 +1507,26 @@ Se basan en el flujo del programa, por lo que se asume que conocemos el funciona
 Este tipo de pruebas son muy buenas cuando debemos realizar:
 
 - **Regression testing o mocks:** descubrimos un **bug** cuando corremos el programa, por lo que vamos a buscar el **bug** gracias a que conocemos como esta estructurado el código.
+
+## Debugging
+
+Los **bugs** son un problema que les sucede a todos, sin embargo si realizamos _test_ a nuestro programa probablemente tendremos menos **bugs**, pero esto no es suficiente.
+
+Existen unas **reglas generales** que nos ayudaran:
+
+- No te molestes con el debugger. Aprende a utilizar el print statement.
+- Estudia los datos disponibles.
+- Utiliza los datos para crear hipótesis y experimentos. Método científico.
+- Ten una mente abierta. Si entendieras el programa, probablemente no habrían bugs.
+- Lleva un registro de lo que has tratado, preferentemente en la forma de tests.
+
+**Debuguear** es un proceso de búsqueda de los **bugs**, por lo que al diseñar nuestros experimentos debemos acotar el espacio de búsqueda en cada prueba. Una forma ágil de **debugear** es utilizando una **búsqueda binaria con print statements**, esto significa que ejecutamos la mitad del código, si no falla entonces sabemos que el problema esta en la otra mitad, y en cada área que vamos acortando lo dividimos por mitades, de esta forma hallaremos rápidamente nuestro **bug**.
+
+Existe un listado de **errores comunes** de los cuales también nos podemos apoyar:
+
+- Encuentra a los sospechosos comunes (llamado a una función mal escrita, parámetros en orden incorrecto, etc.)
+- En lugar de preguntarte por qué un programa no funciona, pregúntate por qué está funcionando de esta manera.
+- Es posible que el bug no se encuentre donde crees que está.
+- Explícale el problema a otra persona. De preferencia que no tenga contexto.
+- Lleva un registro de lo que has tratado, preferentemente en la forma de tests.
+- Vete a dormir.
