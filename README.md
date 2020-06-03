@@ -52,7 +52,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
 
-Posiblemente la primera computadora fue creada por los **antiguos griegos** el cual tenia el proposito de calcular las posiciones del Sol, Luna y algunos otros cuerpos celestes.
+Posiblemente la primera computadora fue creada por los **antiguos griegos** el cual tenia el propósito de calcular las posiciones del Sol, Luna y algunos otros cuerpos celestes.
 
 <br>
 <div align="center"> 
@@ -61,7 +61,7 @@ Posiblemente la primera computadora fue creada por los **antiguos griegos** el c
 </div>
 <br>
 
-Miles de años despues se creo el **telar de Jacquard**, en donde las se creaban tarjetas con agujeros que representaban la información que tiene que hacer un pedazo de tela.
+Miles de años después se creo el **telar de Jacquard**, en donde las se creaban tarjetas con agujeros que representaban la información que tiene que hacer un pedazo de tela.
 
 <br>
 <div align="center"> 
@@ -70,7 +70,7 @@ Miles de años despues se creo el **telar de Jacquard**, en donde las se creaban
 </div>
 <br>
 
-Despues llego el **motor analítico de Charles Babbage**, el cual ocupo la tecnología de punta en su epoca para poder realizar cálculos.
+Después llego el **motor analítico de Charles Babbage**, el cual ocupo la tecnología de punta en su época para poder realizar cálculos.
 
 <br>
 <div align="center"> 
@@ -88,7 +88,7 @@ Durante el siglo IXX el gobierno de EE.UU. tenia serios problemas para realizar 
 </div>
 <br>
 
-Antiguamente existia la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existian compañias que tenian la necesidad de realizar calculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una maquina imaginaria, que tuviera una cinta infinita donde apuntarian símbolos y estos símbolos se pudieran manipular. Es aquí donde se comenzo la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
+Antiguamente existía la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existían compañías que tenían la necesidad de realizar cálculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una maquina imaginaria, que tuviera una cinta infinita donde apuntarían símbolos y estos símbolos se pudieran manipular. Es aquí donde se comenzó la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
 
 <br>
 <div align="center"> 
@@ -99,7 +99,7 @@ Antiguamente existia la **profesión de computadora**, la cual eran personas que
 </div>
 <br>
 
-**John von Neumann** se dio cuenta que en el hardware no solo se podía almacenar el poder de computo, tambien los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
+**John von Neumann** se dio cuenta de que en el hardware no solo se podía almacenar el poder de computo, también los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
 
 <br>
 <div align="center"> 
@@ -134,7 +134,7 @@ Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son ma
 </div>
 <br>
 
-**Richar Feyman** nos dio las bases del computo cuantico, el pensaba que no podiamos simular los sistemas cuanticos si no teniamos una computadora cuántica, por lo cual hoy en día estamos en la carrera de la **computación cuantica.**
+**Richar Feyman** nos dio las bases del computo cuántico, el pensaba que no podíamos simular los sistemas cuánticos sino teníamos una computadora cuántica, por lo cual hoy en día estamos en la carrera de la **computación cuántica.**
 
 <br>
 <div align="center"> 
@@ -150,7 +150,7 @@ Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son ma
 
 Un **algoritmo** es una _lista finita de instrucciones_ que describen un cómputo, que cuando se ejecuta con ciertas entradas _(inputs)_ ejecuta pasos intermedios para llegar a un resultado _(output)_. Los algoritmos se conocen desde los antiguos griegos, y fue la evolución de estos que nos dieron los primeros **lenguajes de programación.**
 
-**Ada Lovelace** se dio cuenta que con las bases teóricas del _motor analítico_ podía calcular una serie de los _números de Bernoulli_, y así creo el primer programa de computación.
+**Ada Lovelace** se dio cuenta de que con las bases teóricas del _motor analítico_ podía calcular una serie de los _números de Bernoulli_, y así creo el primer programa de computación.
 
 <br>
 <div align="center"> 
@@ -187,13 +187,12 @@ En el sentido de la idea de los lenguajes de programación llega **Dennis Ritchi
 </div>
 <br>
 
-
-Los **lenguajes de programación** modernos se les conoce como **Turing completeness** ya que implementan todos los principios para implementar cualquier tipo de _algoritmo._
+Los **lenguajes de programación** modernos se les conoce como **Turing completeness**, ya que implementan todos los principios para implementar cualquier tipo de _algoritmo._
 
 Todos los **lenguajes** tienen:
 - **Sintaxis:** Define la secuencia de símbolos que está bien formada.
 - **Semántica estática:** Define que enunciados con sintaxis correcta tienen significado.
-- **Semántica:** Define el significado. En los lenguajes de programación sólo hay un significado.
+- **Semántica:** Define el significado. En los lenguajes de programación solo hay un significado.
 
 # Introducción a Python
 
@@ -355,7 +354,7 @@ Cuando el espacio en memoria ya no tiene ninguna variable que la referencie, el 
 
 Cada uno de los lenguajes de programación tiene sus reglas. Algunas reglas para las variables en Python son:
 
-- Pueden contener mayúsculas, minusculas, numeros(sin comenzar con uno) y el simbolo _
+- Pueden contener mayúsculas, minúsculas, números(sin comenzar con uno) y el símbolo _
 - No pueden llamarse como las **palabras reservadas**.
 
 Los lenguajes tienen algo llamado **palabras reservadas**, estas son objetos dentro del lenguaje que ya tienen alguna función o valor asignado.
@@ -383,10 +382,10 @@ Los _operadores_ que utilizamos tienen otros significados. Cuando utilizamos el 
 '123' + '456'           # Y el operador +
 '123456'                # Concatenara las cadenas.
 
-('Hip ' * 3) + 'hurra'  # Tambien podemos combinar operadores
+('Hip ' * 3) + 'hurra'  # También podemos combinar operadores
 'Hip Hip Hip hurra'
 
-f'{"Hip " * 3}hurra'    # En Python podemos usar la expresion f para concatenar
+f'{"Hip " * 3}hurra'    # En Python podemos usar la expresión f para concatenar
 'Hip Hip Hip hurra'
 ```
 
@@ -436,7 +435,7 @@ my_str[::2]                 # Traemos desde el principio hasta el final saltando
 Las **entradas** son una forma recibir información para que las computadoras logren realizas cómputos.
 
 - Python tiene la función input para recibir datos del usuario del programa
-- Input siempre regresa cadenas, por lo que si queremos utilizar otro tipo, tenemos que hacer _type casting_. El _type casting_ es **transformar** el tipo de dato en otro, con esto podemos transformar el tipo y guardarlo en memoria asignandolo a una variable.
+- Input siempre regresa cadenas, por lo que si queremos utilizar otro tipo, tenemos que hacer _type casting_. El _type casting_ es **transformar** el tipo de dato en otro, con esto podemos transformar el tipo y guardarlo en memoria asignándolo a una variable.
 
 ```bash
 nombre = input('Cual es tu nombre: ')   # Utilizamos input para ingresar un nombre
@@ -445,7 +444,7 @@ Cual es tu nombre: Karl
 print(nombre) # Vemos que contiene nuestra variable nombre
 Karl
 
-print(f'Tu nombre es {nombre}')   # Imprimimos una cadena concatenando una oracion con nuestra variable.
+print(f'Tu nombre es {nombre}')   # Imprimimos una cadena concatenando una oración con nuestra variable.
 Tu nombre es Karl
 
 numero = input('Escribe un numero: ')   # Utilizamos input para ingresar un numero
@@ -464,18 +463,18 @@ type(numero)    # Nuestra variable numero sera de tipo int
 <class 'int'>
 ```
 
-# Programas ramificados
+## Programas ramificados
 
-Para que nuestros programas realicen trabajos interesantes estos deben ser capaces de tomar decisiones, test o pruebas, es desde este concepto donde salen las **ramificaciones.** Dentro de los test que podemos realizar son los operadores de **comparación** y estos nos devolveras si la comparación es **verdadera (True)** o **falsa (False).**
+Para que nuestros programas realicen trabajos interesantes estos deben ser capaces de tomar decisiones, test o pruebas, es desde este concepto donde salen las **ramificaciones.** Dentro de los test que podemos realizar son los operadores de **comparación** y estos nos devolverás si la comparación es **verdadera (True)** o **falsa (False).**
 
 - **Igual (==)**: Lo utilizaremos para comparar 2 objetos.
 - **Distinto (!=)**: Verificamos que los objetos sean distintos.
-- **Mayor que (>)**: Igual que en algebra, comparamos si el primer termino es mayor que el segundo.
+- **Mayor que (>)**: Igual que en álgebra, comparamos si el primer termino es mayor que el segundo.
 - **Menor que (<)**: Verificamos que el primer termino sea menor que el segundo.
 - **Mayor igual que (>=)**: Verificamos que el primer termino sea mayor igual al segundo.
 - **Menor igual que (<=)**: Verificamos que el primer termino sea menor igual al segundo.
 
-Ademas de los operadores de comparación también tenemos los operadores lógicos, estos son 3 **(and, or, not).**
+Además de los operadores de comparación también tenemos los operadores lógicos, estos son 3 **(and, or, not).**
 
 <br>
 <div align="center"> 
@@ -483,7 +482,7 @@ Ademas de los operadores de comparación también tenemos los operadores lógico
 </div>
 <br>
 
-Una vez que podemos entender bien los operadores de comparación y lógicos podemos generar nuestros **programas ramificados.** Una forma tipica de ocupar los operadores es con el método **if.**
+Una vez que podemos entender bien los operadores de comparación y lógicos podemos generar nuestros **programas ramificados.** Una forma típica de ocupar los operadores es con el método **if.**
 
 ```py
 if condition:   # Evaluamos en primera instancia una condición.
@@ -525,7 +524,7 @@ Para ejecutar nuestro programa iremos a la terminal y escribiremos
 python3 la/dirección/relativa/de/tu/archivo/programas_ramificados.py
 ```
 
-y en consolo nos preguntara nuestros números y nos dara un resultado
+y en consola nos preguntara nuestros números y nos dará un resultado
 
 ```
 Escoge un entero: 8
@@ -550,10 +549,10 @@ Las **iteraciones** nos permiten repetir las operaciones de una manera simple.
 - La mayoría de las tareas computacionales no se pueden lograr con ramificaciones.
 - Cuando queremos que un programa haga lo mismo varias veces, utilizaremos iteraciones.
 - Se pueden escribir iteraciones dentro de iteraciones.
-- Podemos utilizar _break_ para salir de una iteracion.
+- Podemos utilizar _break_ para salir de una iteración.
 - Tener cuidado de iteraciones infinitas.
 
-Para poner en práctica las iteracion crearemos el archivo _iteraciones.py_
+Para poner en práctica las iteración crearemos el archivo _iteraciones.py_
 
 ```py
 contador = 0
@@ -569,7 +568,7 @@ Luego iremos a la consola para ejecutar nuestro archivo.
 python3 la/dirección/relativa/de/tu/archivo/iteraciones.py
 ```
 
-y veremos que en nuestra consola se imprimiran los números del 0 al 9.
+Y veremos que en nuestra consola se imprimirán los números del 0 al 9.
 
 Si queremos que nuestro programa salga de la iteración cuando se cumpla cierta condición usaremos **break.**
 
@@ -580,7 +579,7 @@ while contador < 10:
     print(contador)
     contador += 1       # contador = contador + 1
 
-    if contador > 6:    # Cuando contador sea mayor que 6 terminara la iteracion.
+    if contador > 6:    # Cuando contador sea mayor que 6 terminara la iteración.
         break
 ```
 
@@ -778,7 +777,7 @@ Hasta ahora hemos verificado igualdad con el operador **==**. Sin embargo, cuand
 
 ## Enumeración exhaustiva
 
-También llamado "adivina y verifica" donde simplemente generamos todas las posibilidades. Técnicamente este no es un algoritmo eficiente, sin embargo, dependiendo del universo de posibilidades puede ser que sea el mas adecuado, ya que _las computadoras actuales son muy rapidas_ y por lo tanto la eficiencia de nuestro programa no es relevante, por lo tanto siempre ten en mente este tipo de **algoritmo** como uno de los **primeros en implementar**.
+También llamado "adivina y verifica" donde simplemente generamos todas las posibilidades. Técnicamente este no es un algoritmo eficiente, sin embargo, dependiendo del universo de posibilidades puede ser que sea el mas adecuado, ya que _las computadoras actuales son muy rápidas_ y por lo tanto la eficiencia de nuestro programa no es relevante, por lo tanto siempre ten en mente este tipo de **algoritmo** como uno de los **primeros en implementar**.
 
 Vamos a crear un ejemplo de enumeración exhaustiva buscando la raíz cuadrada exacta de un numero.
 
@@ -793,23 +792,23 @@ while respuesta**2 < objetivo:
     respuesta += 1  # Respuesta aumentara en 1.
 
 if respuesta**2 == objetivo:
-    print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+    print(f'La raíz cuadrada de {objetivo} es {respuesta}')
 
 else:
-    print(f'{objetivo} no tinene una raiz cuadrada exacta')
+    print(f'{objetivo} no tiene una raíz cuadrada exacta')
 ```
 
 ## Aproximación de soluciones
 
-Es similar a la enumarción exhaustiva, pero no necesita una respuesta exacta, por lo tanto podemos aproximar soluciones con un margen de error que llamaremos **epsilon**.
+Es similar a la enumeración exhaustiva, pero no necesita una respuesta exacta, por lo tanto podemos aproximar soluciones con un margen de error que llamaremos **epsilon**.
 
-Como siempre en programación debemos hacer un _trade-off_, no podemos ser precisos y rápidos a la ves, por lo tanto cuando nuestro **epsilon** es muy pequeño esto significa que debemos realizar **mas iteraciones** para llegar a la aproximación, lo cual significa sacrificar tiempo. Y por otro lado si queremos que nuestro **tiempo de ejecución** sea lo **mas corto posible** debemos sacrificar la **precisión** aumentando el valor de **epsilon**.
+Como siempre en programación debemos hacer un _trade-off_, no podemos ser precisos y rápidos a la vez, por lo tanto cuando nuestro **epsilon** es muy pequeño esto significa que debemos realizar **mas iteraciones** para llegar a la aproximación, lo cual significa sacrificar tiempo. Y por otro lado si queremos que nuestro **tiempo de ejecución** sea lo **mas corto posible** debemos sacrificar la **precisión** aumentando el valor de **epsilon**.
 
 ```py
 objetivo = int(input('Escoge un numero: '))
 
 epsilon = 0.01      # Definimos un margen de error.
-paso = epsilon**2   # Los pasos para buscar la raiz sera igual a epsilon^2
+paso = epsilon**2   # Los pasos para buscar la raíz sera igual a epsilon^2
 respuesta = 0       # Inicializamos una respuesta 0
 
 
