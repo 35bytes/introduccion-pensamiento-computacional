@@ -38,6 +38,7 @@
   - [Diccionarios](#Diccionarios)
 - [Pruebas y debbugging](#Pruebas-y-debbugging)
   - [Pruebas de caja negra](#Pruebas-de-caja-negra)
+  - [Pruebas de caja de cristal](#Pruebas-de-caja-de-cristal)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1497,3 +1498,11 @@ Ran 1 test in 0.000s
 
 OK
 ```
+
+## Pruebas de caja de cristal
+
+Se basan en el flujo del programa, por lo que se asume que conocemos el funcionamiento del programa, por lo que podemos probar todos los caminos posibles de una función. Esto significa que vamos a probar las ramificaciones, bucles for y while, recursiónes, etc.
+
+Este tipo de pruebas son muy buenas cuando debemos realizar:
+
+- **Regression testing o mocks:** descubrimos un **bug** cuando corremos el programa, por lo que vamos a buscar el **bug** gracias a que conocemos como esta estructurado el código.
