@@ -43,6 +43,7 @@
 - [Excepciones y afirmaciones](#Excepciones-y-afirmaciones)
   - [Manejo de excepciones](#Manejo-de-excepciones)
   - [Excepciones como control de flujo](#Excepciones-como-control-de-flujo)
+  - [Afirmaciones](#Afirmaciones)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1608,3 +1609,24 @@ function buscaPais(paises, pais) {
 Como puedes ver, el código de Python accede directamente a la llave y únicamente si dicho acceso falla, entonces se captura la excepción y se provee el código necesario. En el caso de JavaScript, se verifica primero que la llave exista en el objeto y únicamente con posterioridad se accede.
 
 Es importante resaltar que ambos estilos pueden utilizarse en Python, pero el estilo EAFP es mucho más “pythonico”.
+
+## Afirmaciones
+
+Las **afirmaciones** son un mecanismo en la que podemos determinar si una afirmación se cumple o no se cumple y poder seguir adelante con la ejecución de nuestro programa o darle término.
+
+Las **afirmaciones** es un método de programación defensiva, esto significa que nos estamos preparando para verificar que los tipos de _inputs_ de nuestro programa es del tipo que nosotros esperamos. Estos también nos sirven para debuggear.
+
+Para realizar una afirmación en nuestro programa lo hacemos con la expresión ```assert <expresion booleana>, <mensaje de error>```.
+
+```py
+def primera_letra(lista_de_palabras):
+    primeras_letras = []
+
+    for palabra in lista_de_palabras:
+        assert type(palabra) == str, f'{palabra} no es str'
+        assert len(palabra) > 0, 'No se permiten str vacios'
+
+        primeras_letras.append(palabra[0])
+
+    return primeras_letras
+```
