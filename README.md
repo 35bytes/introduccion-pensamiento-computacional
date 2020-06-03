@@ -40,6 +40,8 @@
   - [Pruebas de caja negra](#Pruebas-de-caja-negra)
   - [Pruebas de caja de cristal](#Pruebas-de-caja-de-cristal)
   - [Debugging](#Debugging)
+- [Excepciones y afirmaciones](#Excepciones-y-afirmaciones)
+  - [Manejo de excepciones](#Manejo-de-excepciones)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1530,3 +1532,33 @@ Existe un listado de **errores comunes** de los cuales también nos podemos apoy
 - Explícale el problema a otra persona. De preferencia que no tenga contexto.
 - Lleva un registro de lo que has tratado, preferentemente en la forma de tests.
 - Vete a dormir.
+
+# Excepciones y afirmaciones
+
+## Manejo de excepciones
+
+Los **manejos de excepciones** son muy comunes en la programación, no tienen nada de excepcional. Las **excepciones** de Python normalmente se relacionan con errores de semántica, también podemos crear nuestras propias **excepciones**, pero cuando una **excepción** no se maneja (_unhandled exception_), el programa termina en error.
+
+Las **excepciones** se manejan con los keywords: **try, except, finally.** Se pueden utilizar también para _ramificar_ programas.
+
+No deben manejarse de manera silenciosa (por ejemplo, con print statements). Para crear tu propia excepción utiliza el keyword _raise_.
+
+```py
+"""Creamos una función en donde cada elemento de 
+una lista es dividida por un divisor definido"""
+def divide_elementos_de_lista(lista, divisor):
+    """El programa intentara realizar la división"""
+    try:
+        return [i / divisor for i in lista]
+    
+    """En caso de error de tipo ZeroDivisionError que
+    significa error al dividir en cero, el programa
+    ejecutara la siguiente instrucción"""
+    except ZeroDivisionError as e:
+        return lista
+
+lista = list(range(10))
+divisor = 0
+
+print(divide_elementos_de_lista(lista, divisor))
+```
