@@ -8,7 +8,7 @@
 
 # Introducción al documento
 
-El contenido de este documento esta basado en el curso del mismo nombre dictado por [David Aroesti](#https://github.com/jdaroesti) en [Platzi](#https://platzi.com/r/karl-behrens-gil/).
+El contenido de este documento esta basado en el curso del mismo nombre dictado por [David Aroesti](https://github.com/jdaroesti) en [Platzi](https://platzi.com/r/karl-behrens-gil/).
 
 # Tabla de contenido
 - [Introducción al pensamiento computacional](#Introducción-al-pensamiento-computacional)
