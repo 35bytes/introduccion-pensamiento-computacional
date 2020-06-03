@@ -31,6 +31,8 @@
   - [Especificaciones del código](#Especificaciones-del-código)
   - [Recursividad](#Recursividad)
   - [Funciones como objetos](#Funciones-como-objetos)
+- [Tipos estructurados, mutabilidad y funciones de alto nivel](#Tipos-estructurados,-mutabilidad-y-funciones-de-alto-nivel)
+  - [Tuplas](#Tuplas)
 
 # Introducción al pensamiento computacional
 ## Introducción al cómputo
@@ -1059,3 +1061,35 @@ def aplicar_operaciones(num):
 ```
 
 Como pudimos ver, las funciones son objetos muy versátiles que nos permiten tratarlas de diversas maneras y que nos permiten añadir capas adicionales de abstracción a nuestro programa.
+
+# Tipos estructurados, mutabilidad y funciones de alto nivel
+
+## Tuplas
+
+Las **tuplas** son secuencias inmutables _(no se pueden modificar)_ de objetos, que a diferencia de las _cadenas_ pueden contener cualquier tipo de _objetos_. Estas pueden utilizarse para devolver varios valores en una función.
+
+```py
+def coordenadas():
+
+    # En nuestra función devolveremos la tupla (5, 4).
+    return (5,4)
+
+# Si ejecutamos la función vamos a recibir la tupla.
+>>> coordenadas()
+(5,4)
+
+# Tambien podemos "desempaquetar" la tupla que recibimos,
+# esto significa que podemos asignar cada valor que nos llega de la
+# tupla a variables que definamos.
+>>> x, y = coordenadas()
+
+# Si imprimimos la primera variable desempaquetada veremos
+# el primer valor de la tupla.
+>>> x
+5
+
+# Y muy parecido al ejemplo anterior, con nuestra
+# variable "y" tendremos el segundo valor.
+>>> y
+4
+```
