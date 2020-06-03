@@ -838,7 +838,7 @@ Para verlo de forma gráfica buscaremos el valor 18 en la lista [1, 3, 5, 7, 9, 
 
 <br>
 <div align="center"> 
-  <img src="readme_img/busqueda-binaria.png" width="500">
+  <img src="readme_img/búsqueda-binaria.png" width="500">
 </div>
 <br>
 
@@ -849,7 +849,7 @@ objetivo = int(input('Escoge un numero: '))
 
 epsilon = 0.01  # Definimos nuestro margen de error.
 
-bajo = 0.0      # Inicializamos la parte baja de nuestra busqueda como 0
+bajo = 0.0      # Inicializamos la parte baja de nuestra búsqueda como 0
 alto = max(1.0, objetivo)   # Entre el numero que ingresamos y 1 vamos a tomar el mayor valor.
 respuesta = (alto + bajo) / 2   # Definimos la mitad entre bajo y alto.
 
@@ -859,19 +859,19 @@ while abs(respuesta**2 - objetivo) >= epsilon:
     # Si ((alto+bajo)/2)^2 es menor a nuestro numero objetivo
     if respuesta**2 < objetivo:
         
-        # Definimos la parte baja de nuestra busqueda como (alto + bajo)/2
+        # Definimos la parte baja de nuestra búsqueda como (alto + bajo)/2
         bajo = respuesta
 
     # En caso que (alto+bajo)/2 es mayor a nuestro numero objetivo
     else: 
-        # Definimos la parte baja de nuestra busqueda como (alto + bajo)/2
+        # Definimos la parte baja de nuestra búsqueda como (alto + bajo)/2
         alto = respuesta
 
     # Luego definimos nuevamente la mitad entre alto y bajo.
     respuesta = (alto + bajo) / 2
 
 # Cuando el ciclo ya alcance un error menor a epsilon imprimiremos el resultado.
-print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+print(f'La raíz cuadrada de {objetivo} es {respuesta}')
 ```
 
 Este algoritmo es extremadamente rápido en comparación a los anteriores y esto es justamente lo que lo hace uno de los mas potentes.
@@ -882,15 +882,15 @@ Este algoritmo es extremadamente rápido en comparación a los anteriores y esto
 
 La **abstracción** significa que no necesitas entender como funciona algo para utilizarlo. Un ejemplo de esto es una _calculadora_, en este caso no muchos saben como funciona el circuito interno de una calculadora, sin embargo esto no nos limita a utilizarlo, ya que solo necesitamos saber como operarlo.
 
-Una de las habilidades mas importantes en la programación es la **abstracción**, ya que utilizaremos la mayoria del tiempo códigos y librerias de otras personas, por lo que solamente debemos saber operarlos.
+Una de las habilidades mas importantes en la programación es la **abstracción**, ya que utilizaremos la mayoría del tiempo códigos y librerías de otras personas, por lo que solamente debemos saber operarlos.
 
 La **decomposición** nos permite dividir el código en **componentes (funciones)** que colaboran con un fin en común. Esto se puede pensar como mini programas dentro de un programa mayor.
 
 Para poder escribir una **función** en _Python_ lo hacemos con **def**
 
 ```py
-"""Las funciones se definen con 'def' luego del nombre y los parametros que necesitara."""
-def nombre(parametros):
+"""Las funciones se definen con 'def' luego del nombre y los parámetros que necesitara."""
+def nombre(parámetros):
 
     """Ejecutamos las expresiones que necesitemos"""
     cuerpo
@@ -898,7 +898,7 @@ def nombre(parametros):
     """Y retornaremos el valor que queramos. El return no es obligatorio."""
     return expresion
 
-"""Aqui definimos una función suma"""
+"""Aquí definimos una función suma"""
 def suma(a, b):
     total = a + b
     return total
@@ -907,18 +907,18 @@ def suma(a, b):
 función por su nombre e ingresamos los parámetros que necesita"""
 suma(2, 3)
 ```
-En las funciones existen los **valores por defecto**, esto significa que en caso de que no se ingrese el argumento este ya tendra un **valor por defecto.** Tambien existen los keywords que significa que al llamar la funcion podemos llamar al nombre del argumento para asignarles un valor.
+En las funciones existen los **valores por defecto**, esto significa que en caso de que no se ingrese el argumento este ya tendrá un **valor por defecto.** También existen los keywords que significa que al llamar la función podemos llamar al nombre del argumento para asignarles un valor.
 
 ```py
-"""Definimos una funcion con valor por defecto de "inverso = False"""
+"""Definimos una función con valor por defecto de "inverso = False"""
 def nombre_completo(nombre, apellido, inverso=False)
     if inverso:
         return f'{apellido} {nombre}'
     else:
         return f'{nombre} {apellido}'
 
-"""De forma ordena ingreso los valores a los parametros de la función.
-Sin embargo no es necesario ingresar un valor para "inverso" ya que
+"""De forma ordena ingreso los valores a los parámetros de la función.
+Sin embargo no es necesario ingresar un valor para "inverso", ya que
 tiene un valor por defecto ya asignado"""
 nombre_completo('Karl', 'Behrens')
 
@@ -926,7 +926,7 @@ nombre_completo('Karl', 'Behrens')
 nombre_completo('Karl', 'Behrens', inverso=True)
 
 """Con Keywords podemos ingresar las variables en el orden que
-deseamos mientras llamemos el valor del parametro y
+deseamos mientras llamemos el valor del parámetro y
 le asignamos el valor."""
 nombre_completo(apellido='Behrens', nombre='Karl')
 ```
@@ -951,14 +951,14 @@ def cualquier_func(cualquier_arg):
 func1(un_arg, cualquier_func)
 ```
 
-El uso de las variables y acceso a el a lo largo de nuestro código se llama **scope.**
+El uso de las variables y acceso a él a lo largo de nuestro código se llama **scope.**
 
 ## Especificaciones del código
 
-La especificacion del código es un **comentario** en el que informamos de forma **explicita** y **concisa** lo que realizan nuestras instrucciones. Tenemos que tener 3 items importantes en la documentación:
+La especificación del código es un **comentario** en el que informamos de forma **explicita** y **concisa** lo que realizan nuestras instrucciones. Tenemos que tener 3 items importantes en la documentación:
 
 - Que hace la instrucción.
-- Que significan los parametros.
+- Que significan los parámetros.
 - Que es lo que devuelve nuestra instrucción.
 
 ```py
@@ -978,7 +978,7 @@ def suma(a, b):
 
 La recursividad se puede definir de 2 formas:
 
-- **Algorítmica:** Una forma de crear soluciones utilizando el principio de "divide y venceras". Esto significa que podemos resolver un problema dividiendolo en pequeñas versiones mas simple e ir resolviendolos de a poco.
+- **Algorítmica:** Una forma de crear soluciones utilizando el principio de "divide y vencerás". Esto significa que podemos resolver un problema dividiéndolo en pequeñas versiones mas simple e ir resolviéndolos de a poco.
 
 - **Programática:** Una técnica programática mediante la cual una función se llama a sí misma.
 
@@ -997,7 +997,7 @@ def factorial(n):
     if n == 1:
         return 1
 
-    # Llamamos a la funcion "factorial" a si misma
+    # Llamamos a la función "factorial" a si misma
     # pero el valor de n va disminuyendo en 1
     # a medida que se repite su llamado.
     return n * factorial(n - 1)
@@ -1047,7 +1047,7 @@ def aplicar_operacion(f, numeros):
 
 Una forma de definir una función en una expresión es utilizando el keyword lambda. lambda tiene la siguiente sintaxis: lambda <vars>: <expresion>.
 
-Otro ejemplo interesante es que las funciones se pueden utilizar en una expresión directamente. Esto es posible ya que como lo hemos platicado con anterioridad, en Python las variables son simplemente nombres que apuntan a un objeto (en este caso a una función). Por ejemplo:
+Otro ejemplo interesante es que las funciones se pueden utilizar en una expresión directamente. Esto es posible porque como lo hemos platicado con anterioridad, en Python las variables son simplemente nombres que apuntan a un objeto (en este caso a una función). Por ejemplo:
 
 ```py
 sumar = lambda x, y: x + y
@@ -1092,7 +1092,7 @@ def coordenadas():
 >>> coordenadas()
 (5,4)
 
-"""Tambien podemos "desempaquetar" la tupla que recibimos,
+"""También podemos "desempaquetar" la tupla que recibimos,
 esto significa que podemos asignar cada valor que nos llega de la
 tupla a variables que definamos."""
 >>> x, y = coordenadas()
@@ -1154,8 +1154,7 @@ another_range = range(0, 8, 2)
 """Si realizamos un for loop en nuestro rango
 e imprimimos el valor de i veremos
 que nos imprime desde el 0 al 6
-saltando de 2 en 2. El 8 no se imprime
-ya que el último número del el rango no se incluye."""
+saltando de 2 en 2. El 8 no se imprime, ya que el último número del el rango no se incluye."""
 for i in my_other_range:
     print(i)
 
@@ -1186,16 +1185,16 @@ my_list[0]
 """Si queremos utilizar la notación de slices (dividir) definimos los
 índices en los que dividiremos nuestra lista."""
 
-"""Aquí llamaremos desde el 2do indice hasta el final."""
+"""Aquí llamaremos desde el 2do índice hasta el final."""
 my_list[1:]
 [2, 3]
 
 ########################################################
 
-"""Para agregar un item a nuestra lista lo haremos con la funcion append
-my_list.append(4)"""
+"""Para agregar un ítem a nuestra lista lo haremos con la función append"""
+my_list.append(4)
 
-"""Ahora la lista tendra 4 objetos."""
+"""Ahora la lista tendrá 4 objetos."""
 print(my_list)
 [1, 2, 3, 4]
 
@@ -1218,7 +1217,7 @@ print(my_list)
 
 ########################################################
 
-"""Cuando una variable hace referencía a una lista
+"""Cuando una variable hace referencia a una lista
 significa que apunta al mismo espacio en memoria,
 esto significa que si cambia la lista se vera reflejado
 en todas sus referencias, esto es un side effect"""
@@ -1226,10 +1225,10 @@ en todas sus referencias, esto es un side effect"""
 """Creamos la lista a"""
 a = [1, 2, 3]
 
-"""Creamos la lista b que hara referencía a la lista a"""
+"""Creamos la lista b que hará referencia a la lista a"""
 b = a
 
-"""Si imprimimos las listas seran iguales"""
+"""Si imprimimos las listas serán iguales"""
 a
 [1, 2, 3]
 
@@ -1284,7 +1283,7 @@ my_list = list(range(10))
 
 
 """Si revisamos que contiene veremos que tiene todos
-los numeros desde el 0 al 9"""
+los números desde el 0 al 9"""
 my_list
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -1301,7 +1300,7 @@ double
 
 ###########################################################
 
-"""Otro ejemplo de list compregension puede ser
+"""Otro ejemplo de list comprehension puede ser
 solo tomar los numeros pares de nuestra lista"""
 pares = [i for i in my_list if i % 2 == 0]
 
@@ -1316,7 +1315,7 @@ pares
 Los **diccionarios** son como listas, pero en lugar de usar índices utilizan **llaves**. Estos **no tienen un orden interno**, son **mutables** y pueden **iterarse.**
 
 ```py
-"""Creamos un diccionario utilizando los simbolos {} y debemos
+"""Creamos un diccionario utilizando los símbolos {} y debemos
 darle un nombre a cada llave"""
 my_dict = {
     'nombre': 'Karl',
@@ -1370,7 +1369,7 @@ my_dict
 ###########################################################
 
 """Para obtener las llaves de nuestro diccionario
-realizamos un metodo for loop."""
+realizamos un método for loop."""
 
 for llave in my_dict.keys():
     print(llave)
@@ -1388,7 +1387,7 @@ Karl
 Behrens
 
 
-"""Tambien podemos combinar estos for loops"""
+"""También podemos combinar estos for loops"""
 
 for llave, valor in my_dict.items():
     print(llave, valor)
@@ -1421,22 +1420,22 @@ Estos tipos de pruebas son muy importantes para 2 tipos de test:
 
 - **Integration testing:** es cuando vemos que todos los módulos funcionan entre sí.
 
-Es una **buena práctica** realizar los test **antes** de crear tus lineas de código, esto es por que cualquier cambio que se realice a futuro los _test_ estaran incorporados para determinar si los cambios cumplen lo esperado.
+Es una **buena práctica** realizar los test **antes** de crear tus lineas de código, esto es por que cualquier cambio que se realice a futuro los _test_ estarán incorporados para determinar si los cambios cumplen lo esperado.
 
-En Python existe la posibilidad de realizar _test_ gracias a la libreria **unittest.** Puede ser que el siguiente código no lo entiendas en su totalidad, pero en una próxima guía detallare mas el tema de _clases_ en programación. Por ahora te mostrare como se realizan estos _test_.
+En Python existe la posibilidad de realizar _test_ gracias a la librería **unittest.** Puede ser que el siguiente código no lo entiendas en su totalidad, pero en una próxima guía detallare mas el tema de _clases_ en programación. Por ahora te mostrare como se realizan estos _test_.
 
 ```py
-"""Importamos la libreria de unittest."""
+"""Importamos la librería de unittest."""
 import unittest
 
 """Creamos una clase para los test, en este caso se llamara
 CajaNegraTest, y como parámetro."""
 class CajaNegraTest(unittest.TestCase):
 
-    """Definimos la funcion que generara el test."""
+    """Definimos la función que generara el test."""
     def test_suma_dos_positivos(self):
 
-        "Para nuestro ejemplo usaremos 2 parametros."""
+        "Para nuestro ejemplo usaremos 2 parámetros."""
         num_1 = 10
         num_2 = 5
 
@@ -1496,7 +1495,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Ahora ejecutaremos denuevo nuestro _test_ en la terminal.
+Ahora ejecutaremos de nuevo nuestro _test_ en la terminal.
 
 ```bash
 python3 caja_negra.py
@@ -1524,7 +1523,7 @@ Existen unas **reglas generales** que nos ayudaran:
 - No te molestes con el debugger. Aprende a utilizar el print statement.
 - Estudia los datos disponibles.
 - Utiliza los datos para crear hipótesis y experimentos. Método científico.
-- Ten una mente abierta. Si entendieras el programa, probablemente no habrían bugs.
+- Ten una mente abierta. Si entendieras el programa, probablemente no habría bugs.
 - Lleva un registro de lo que has tratado, preferentemente en la forma de tests.
 
 **Debuguear** es un proceso de búsqueda de los **bugs**, por lo que al diseñar nuestros experimentos debemos acotar el espacio de búsqueda en cada prueba. Una forma ágil de **debugear** es utilizando una **búsqueda binaria con print statements**, esto significa que ejecutamos la mitad del código, si no falla entonces sabemos que el problema esta en la otra mitad, y en cada área que vamos acortando lo dividimos por mitades, de esta forma hallaremos rápidamente nuestro **bug**.
@@ -1583,7 +1582,7 @@ Veamos ambos estilos:
 
 def busca_pais(paises, pais):
     """
-    Paises es un diccionario. Pais es la llave.
+    Países es un diccionario. País es la llave.
     Codigo con el principio EAFP.
     """
     
@@ -1627,7 +1626,7 @@ def primera_letra(lista_de_palabras):
 
     for palabra in lista_de_palabras:
         assert type(palabra) == str, f'{palabra} no es str'
-        assert len(palabra) > 0, 'No se permiten str vacios'
+        assert len(palabra) > 0, 'No se permiten str vacíos'
 
         primeras_letras.append(palabra[0])
 
